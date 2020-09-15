@@ -1,0 +1,230 @@
+/* Variables */
+:root {
+    --basic-black: #000000;
+    --basic-white: #FFFFFF;
+    --basic-grey: #333333;
+    --basic-blue: #81B3D2;
+    --basic-brown: #766357;
+    --basic-bg-grey: #F2F2F2;
+    --basic-block-bg-grey: #EEEEEE;
+    --basic-border-grey: #E5E5E5;
+
+    --special-extra-dark-grey: #666666;
+    --special-dark-grey: #6A6A6A;
+    --special-grey: #A9A9A9;
+    --special-medium-grey: #EBEBEB;
+    --special-light-grey: #BDBBBC;
+    --special-blue-hover: #669EC0;
+    --special-blue-active: #5496BD;
+    --special-brown-hover: #604E43;
+    --special-brown-active: #503E33;
+    --special-bg-white: rgba(255, 255, 255, 0.9);
+    --special-white: rgba(255, 255, 255, 0.3);
+}
+
+/* Global */
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-bg-grey);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Main header */
+.main-header {
+    background-color: var(--basic-white);
+}
+
+.main-nav li {
+    list-style: none;
+}
+
+.main-nav a {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    color: var(--basic-black);
+}
+
+.main-nav a:hover {
+    color: var(--basic-blue);
+}
+
+.main-nav a:active {
+    color: var(--basic-black);
+    opacity: 0.3;
+}
+
+/* Greeting */
+
+.greeting {
+    background-color: var(--basic-white);
+    background-image: url("https://via.placeholder.com/1200x700");
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.greeting-intro {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.advantages-intro {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-grey);
+}
+
+/* Advantages */
+
+.advantages-list{
+    list-style: none;
+}
+
+.advantages-list-item {
+    background-color: var(--basic-block-bg-grey);
+}
+
+.advantage-title {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.advantage-number,
+.advantage-description {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-grey);
+}
+
+.big-advantage {
+    background-color: var(--basic-blue);
+}
+
+.big-advantage h3,
+.big-advantage p {
+    color: var(--basic-white);
+}
+
+.features-list {
+    list-style: none;
+    background-color: var(--basic-white);
+}
+
+.feature-title {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.features-list-item p {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-grey);
+}
+
+/* Hotel search */
+
+.hotel-search {
+    background-color: var(--basic-white);
+}
+
+.hotel-search-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.hotel-search-intro {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-grey);
+}
+
+.button { 
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    border: none;
+    cursor: pointer;
+}
+
+.hotel-search-button {
+    font-size: 21px;
+    line-height: 26px;
+    background-color: var(--basic-brown);
+}
+
+.hotel-search-button:hover {
+    background-color: var(--special-brown-hover);
+}
+
+.hotel-search-button:active {
+    color: var(--special-white);
+    background-color: var(--special-brown-active);
+}
+
+/* Footer */
+
+.main-footer {
+    background-color: var(--special-bg-white);
+}
+
+.contacts {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.social-list{
+    list-style: none;
+}
+
+.social-link{
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+}
+
+.social-link:hover {
+    background-color: var(--special-blue-hover);
+}
+
+.social-link:active {
+    background-color: var(--special-blue-active);
+    color: var(--special-white);
+}
+
+.copyright {
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+
+.copyright-link {
+    color: var(--basic-black);
+}
+
+.copyright-link:hover {
+    color: var(--basic-blue);
+}
+
+.copyright-link:active {
+    color: var(--special-light-grey);
+}
