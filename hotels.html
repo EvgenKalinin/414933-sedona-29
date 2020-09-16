@@ -3,112 +3,115 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <div class="logo"><a href="index.html"><img src="https://via.placeholder.com/138x70" alt=""></a></div>
-      <nav>
-        <ul>
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
+      <nav class="main-nav">
+        <ul class="left-menu">
+          <li class="left-menu-item"><a class="main-nav-link" href="#">Информация</a></li>
+          <li class="left-menu-item"><a class="main-nav-link" href="#">Фото и видео</a></li>
         </ul>
-        <ul>
-          <li><a href="#">Карта сайта</a></li>
-          <li><a href="#">Гостиницы</a></li>
+        <ul class="right-menu">
+          <li class="right-menu-item"><a class="main-nav-link" href="#">Карта сайта</a></li>
+          <li class="right-menu-item"><a class="main-nav-link current">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1>Гостиницы города Седона</h1>
-      <section>
-        <h2>Параметры гостиниц</h2>
-        <form>
+      <h1 class="visually-hidden">Гостиницы города Седона</h1>
+      <section class="hotels-features">
+        <h2 class="visually-hidden">Параметры гостиниц</h2>
+        <form class="features-select">
           <p>Тут будет форма для выбора гостиницы</p>
         </form>
       </section>
-      <section>
-        <h2>Результат выбора</h2>
+      <section class="hotels-result">
+        <h2 class="visually-hidden">Результат выбора</h2>
         <div class="hotels-sorting">
-          <h3>Cортировка гостиниц</h3>
-          <p>Найдено: <span>3</span></p>
-          <p>Сортировка: 
-            <ul>
-              <li><button type="button">По цене</button></li>
-              <li><button type="button">По типу</button></li>
-              <li><button type="button">По рейтингу</button></li>
+          <h3 class="visually-hidden">Cортировка гостиниц</h3>
+          <p class="results-quantity">Найдено: <span class="quantity-variable">3</span></p>
+          <p class="sorting-parameters">Сортировка: 
+            <ul class="sort-by-parameter">              
+              <li><button class="sort-parameter current-sort-parameter" type="button">По цене</button></li>
+              <li><button class="sort-parameter" type="button">По типу</button></li>
+              <li><button class="sort-parameter" type="button">По рейтингу</button></li>
             </ul>
-            <ul>
+            <ul class="sort-by-value">
               <li><button type="button">По возрастанию</button></li>
               <li><button type="button">По убыванию</button></li>
             </ul>
           </p>
         </div>
-        <div>
-          <h3>Результат сортировки</h3>
-          <ul>
-            <li>
-              <a href="#">
-                <h4>Amara Resort & Spa</h4>
-                <img src="https://via.placeholder.com/135x90" alt="">
+        <div class="sorting-results">
+          <h3 class="visually-hidden">Результат сортировки</h3>
+          <ul class="results-list">
+            <li class="hotel-card">
+              <a class="hotel-link" href="#">
+                <h4 class="hotel-title">Amara Resort & Spa</h4>
+                <img class="hotel-img" src="https://via.placeholder.com/135x90" alt="">
               </a>
-              <p>
-                <span>Гостиница</span>
-                <span>от 4000р.</span>
+              <p class="hotel-characteristics">
+                <span class="hotel-type">Гостиница</span>
+                <span class="hotel-price">от 4000р.</span>
               </p>
-              <div class="rating">
-                <div class="stars"></div>
-                <p>Рейтинг:<span> 8.5</span></p>
+              <div class="hotel-rating-container">
+                <div class="hotel-stars"></div>
+                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.5</span></p>
               </div>
-              <ul>
-                <li>
-                  <a href="#">Подробнее</a>
+              <ul class="hotel-card-nav">
+                <li class="card-nav-item">
+                  <a class="button detailes-button" href="#">Подробнее</a>
                 </li>
-                <li>
-                  <a href="#">Забронировать</a>
+                <li class="card-nav-item">
+                  <a class="button booking-button" href="#">Забронировать</a>
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#">
-                <h4>Desert Quail Inn</h4>
-                <img src="https://via.placeholder.com/135x90" alt="">
+            <li class="hotel-card">
+              <a class="hotel-link" href="#">
+                <h4 class="hotel-title">Desert Quail Inn</h4>
+                <img class="hotel-img" src="https://via.placeholder.com/135x90" alt="">
               </a>
-              <p>
-                <span>Мотель</span>
-                <span>от 3000р.</span>
+              <p class="hotel-characteristics">
+                <span class="hotel-type">Мотель</span>
+                <span class="hotel-price">от 3000р.</span>
               </p>
-              <div class="rating">
-                <div class="stars"></div>
-                <p>Рейтинг:<span> 8.9</span></p>
+              <div class="hotel-rating-container">
+                <div class="hotel-stars"></div>
+                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.9</span></p>
               </div>
-              <ul>
-                <li>
-                  <a href="#">Подробнее</a>
+              <ul class="hotel-card-nav">
+                <li class="card-nav-item">
+                  <a class="button detailes-button" href="#">Подробнее</a>
                 </li>
-                <li>
-                  <a href="#">Забронировать</a>
+                <li class="card-nav-item">
+                  <a class="button booking-button" href="#">Забронировать</a>
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="#">
-                <h4>Villas at Poco Diablo</h4>
-                <img src="https://via.placeholder.com/135x90" alt="">
+            <li class="hotel-card">
+              <a class="hotel-link" href="#">
+                <h4 class="hotel-title">Villas at Poco Diablo</h4>
+                <img class="hotel-img" src="https://via.placeholder.com/135x90" alt="">
               </a>
-              <p>
-                <span>Апартаменты</span>
-                <span>от 2000р.</span>
+              <p class="hotel-characteristics">
+                <span class="hotel-type">Апартаменты</span>
+                <span class="hotel-price">от 2000р.</span>
               </p>
-              <div class="rating">
-                <div class="stars"></div>
-                <p>Рейтинг:<span> 9.2</span></p>
+              <div class="hotel-rating-container">
+                <div class="hotel-stars"></div>
+                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 9.2</span></p>
               </div>
-              <ul>
-                <li>
-                  <a href="#">Подробнее</a>
+              <ul class="hotel-card-nav">
+                <li class="card-nav-item">
+                  <a class="button detailes-button" href="#">Подробнее</a>
                 </li>
-                <li>
-                  <a href="#">Забронировать</a>
+                <li class="card-nav-item">
+                  <a class="button booking-button" href="#">Забронировать</a>
                 </li>
               </ul>
             </li>
@@ -116,20 +119,21 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <div class="contacts">
-        <span>#visitSEDONA</span>
-        <span>тел: +7(495) 666-01-66</span>
+        <span class="contacts-hashtag">#visitSEDONA</span>
+        <span class="contacts-phone">тел: +7(495) 666-01-66</span>
       </div>
       <div class="social">
-        <ul>
-          <li><a href="https://twitter.com/">Twitter</a></li>
-          <li><a href="https://www.facebook.com/">Facebook</a></li>
-          <li><a href="https://www.youtube.com/">Youtube</a></li>
+        <ul class="social-list">
+          <li class="social-list-item"><a class="social-link" href="https://twitter.com/">Twitter</a></li>
+          <li class="social-list-item"><a class="social-link" href="https://www.facebook.com/">Facebook</a></li>
+          <li class="social-list-item"><a class="social-link" href="https://www.youtube.com/">Youtube</a></li>
         </ul>
       </div>
-      <div class="copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
+      <div class="copyright-wrap">
+        <span class="copyright">Website by</span>
+        <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
       </div>
     </footer>
   </body>
