@@ -45,9 +45,38 @@ img {
     height: auto;
 }
 
+/* Grid */
+
+.page {
+    min-width: 1280px;
+    height: 100%;
+}
+
+.page-body {
+    min-height: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+}
+
 /* Main header */
 .main-header {
+    position: relative;
+    display: grid;
     background-color: var(--basic-white);
+}
+
+.logo {
+    position: absolute;
+    justify-self: center;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 140px;
 }
 
 .main-nav li {
@@ -77,11 +106,23 @@ img {
     opacity: 1;
 }
 
+/* Index main */
+
+.index-main {
+    display: grid;
+    grid-template-rows: min-content min-content min-content;
+}
+
 /* Greeting */
 
 .greeting {
+    min-height: 510px;
     background-color: var(--basic-white);
-    background-image: url("https://via.placeholder.com/1200x700");
+}
+
+.greeting-title{
+    min-height: 510px;
+    background-image: url("../img/background-photo.jpg");
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -100,12 +141,29 @@ img {
 
 /* Advantages */
 
+.advantages{
+    outline: 1px solid tomato;
+}
+
 .advantages-list{
+    display: grid;
+    grid-template-columns: 3, 400px;
+    grid-template-rows: 3, min-content;
     list-style: none;
 }
 
 .advantages-list-item {
     background-color: var(--basic-block-bg-grey);
+}
+
+.advantages-list-item:first-child {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.advantages-list-item:nth-child(2) {
+    grid-column: 1/4;
+    grid-row: 2/3;
 }
 
 .advantage-title {
@@ -122,7 +180,23 @@ img {
 }
 
 .big-advantage {
+    display: grid;
     background-color: var(--basic-blue);
+}
+
+.big-advantage:first-child {
+    grid-template-columns: 3, 400px;
+    grid-template-rows: 2;
+}
+
+.first-item-description-wrap {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.first-advantage-img{
+    grid-column: 2/4;
+    grid-row: 1/2;
 }
 
 .big-advantage h3,
@@ -130,9 +204,20 @@ img {
     color: var(--basic-white);
 }
 
-.features-list {
-    list-style: none;
+.features-list-wrap {
+    grid-column: 1/4;
     background-color: var(--basic-white);
+}
+
+.features-list {
+    outline: 1px solid tomato;
+    display: grid;
+    grid-template-columns: 3, 400px;
+    list-style: none;
+}
+
+.features-list-item{
+    outline: 1px solid plum;
 }
 
 .feature-title {
