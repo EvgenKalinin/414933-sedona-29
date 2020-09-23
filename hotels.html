@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
@@ -7,9 +7,9 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body">
     <header class="main-header">
-      <div class="logo"><a href="index.html"><img src="https://via.placeholder.com/138x70" alt=""></a></div>
+      <div class="logo"><a href="index.html"><img src="img/logo@2x.png" width="138" height="70" alt="Логотип"></a></div>
       <nav class="main-nav">
         <ul class="left-menu">
           <li class="left-menu-item"><a class="main-nav-link" href="#">Информация</a></li>
@@ -21,7 +21,7 @@
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="hotels-main">
       <h1 class="visually-hidden">Гостиницы города Седона</h1>
       <section class="hotels-features">
         <h2 class="visually-hidden">Параметры гостиниц</h2>
@@ -35,33 +35,35 @@
           <h3 class="visually-hidden">Cортировка гостиниц</h3>
           <p class="results-quantity">Найдено: <span class="quantity-variable">3</span></p>
           <p class="sorting-parameters">Сортировка: 
-            <ul class="sort-by-parameter">              
-              <li><button class="sort-parameter current-sort-parameter" type="button">По цене</button></li>
-              <li><button class="sort-parameter" type="button">По типу</button></li>
-              <li><button class="sort-parameter" type="button">По рейтингу</button></li>
-            </ul>
-            <ul class="sort-by-value">
-              <li><button type="button">По возрастанию</button></li>
-              <li><button type="button">По убыванию</button></li>
-            </ul>
+            <div class="sorting-parameters-wrap">
+              <ul class="sort-by-parameter">              
+                <li><button class="sort-parameter current-sort-parameter" type="button">По цене</button></li>
+                <li><button class="sort-parameter" type="button">По типу</button></li>
+                <li><button class="sort-parameter" type="button">По рейтингу</button></li>
+              </ul>
+              <ul class="sort-by-value">
+                <li><button type="button">По возрастанию</button></li>
+                <li><button type="button">По убыванию</button></li>
+              </ul>
+            </div>
           </p>
         </div>
         <div class="sorting-results">
           <h3 class="visually-hidden">Результат сортировки</h3>
           <ul class="results-list">
             <li class="hotel-card">
-              <a class="hotel-link" href="#">
+              <a class="hotel-title-link" href="#">
                 <h4 class="hotel-title">Amara Resort & Spa</h4>
+              </a> 
+              <a class="hotel-img-link" href="#"> 
                 <img class="hotel-img" src="img/amara1.jpg" width="135" height="90" alt="Здание с лужайкой на фоне гор">
               </a>
               <p class="hotel-characteristics">
                 <span class="hotel-type">Гостиница</span>
                 <span class="hotel-price">от 4000р.</span>
               </p>
-              <div class="hotel-rating-container">
-                <div class="hotel-stars"></div>
-                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.5</span></p>
-              </div>
+              <div class="hotel-stars"></div>
+              <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.5</span></p>
               <ul class="hotel-card-nav">
                 <li class="card-nav-item">
                   <a class="button detailes-button" href="#">Подробнее</a>
@@ -72,18 +74,18 @@
               </ul>
             </li>
             <li class="hotel-card">
-              <a class="hotel-link" href="#">
+              <a class="hotel-title-link" href="#">
                 <h4 class="hotel-title">Desert Quail Inn</h4>
+              </a>
+              <a class="hotel-img-link" href="#">
                 <img class="hotel-img" src="img/desert1.jpg" width="135" height="90" alt="Небольшое здание с паковкой среди пустыни">
               </a>
               <p class="hotel-characteristics">
                 <span class="hotel-type">Мотель</span>
                 <span class="hotel-price">от 3000р.</span>
               </p>
-              <div class="hotel-rating-container">
-                <div class="hotel-stars"></div>
-                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.9</span></p>
-              </div>
+              <div class="hotel-stars"></div>
+              <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.9</span></p>
               <ul class="hotel-card-nav">
                 <li class="card-nav-item">
                   <a class="button detailes-button" href="#">Подробнее</a>
@@ -94,18 +96,18 @@
               </ul>
             </li>
             <li class="hotel-card">
-              <a class="hotel-link" href="#">
+              <a class="hotel-title-link" href="#">
                 <h4 class="hotel-title">Villas at Poco Diablo</h4>
+              </a>
+              <a class="hotel-img-link" href="#">  
                 <img class="hotel-img" src="img/villas1.jpg" width="135" height="90" alt="Дом окружённый зелёным газоной и деревьями">
               </a>
               <p class="hotel-characteristics">
                 <span class="hotel-type">Апартаменты</span>
                 <span class="hotel-price">от 2000р.</span>
               </p>
-              <div class="hotel-rating-container">
-                <div class="hotel-stars"></div>
-                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 9.2</span></p>
-              </div>
+              <div class="hotel-stars"></div>
+              <p class="hotel-rating">Рейтинг:<span class="rating-value"> 9.2</span></p>
               <ul class="hotel-card-nav">
                 <li class="card-nav-item">
                   <a class="button detailes-button" href="#">Подробнее</a>
@@ -120,20 +122,22 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="contacts">
-        <span class="contacts-hashtag">#visitSEDONA</span>
-        <span class="contacts-phone">тел: +7(495) 666-01-66</span>
-      </div>
-      <div class="social">
-        <ul class="social-list">
-          <li class="social-list-item"><a class="social-link" href="https://twitter.com/">Twitter</a></li>
-          <li class="social-list-item"><a class="social-link" href="https://www.facebook.com/">Facebook</a></li>
-          <li class="social-list-item"><a class="social-link" href="https://www.youtube.com/">Youtube</a></li>
-        </ul>
-      </div>
-      <div class="copyright-wrap">
-        <span class="copyright">Website by</span>
-        <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
+      <div class="footer-layout-wrap">
+        <div class="contacts">
+          <span class="contacts-hashtag">#visitSEDONA</span>
+          <span class="contacts-phone">тел: +7(495) 666-01-66</span>
+        </div>
+        <div class="social">
+          <ul class="social-list">
+            <li class="social-list-item"><a class="social-link" href="https://twitter.com/">Twitter</a></li>
+            <li class="social-list-item"><a class="social-link" href="https://www.facebook.com/">Facebook</a></li>
+            <li class="social-list-item"><a class="social-link" href="https://www.youtube.com/">Youtube</a></li>
+          </ul>
+        </div>
+        <div class="copyright-wrap">
+          <span class="copyright">Website by</span>
+          <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">Html Academy</a>
+        </div>
       </div>
     </footer>
   </body>
