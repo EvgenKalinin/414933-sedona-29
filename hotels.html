@@ -34,88 +34,99 @@
         <div class="hotels-sorting">
           <h3 class="visually-hidden">Cортировка гостиниц</h3>
           <p class="results-quantity">Найдено: <span class="quantity-variable">3</span></p>
-          <p class="sorting-parameters">Сортировка: 
-            <div class="sorting-parameters-wrap">
-              <ul class="sort-by-parameter">              
-                <li><button class="sort-parameter current-sort-parameter" type="button">По цене</button></li>
-                <li><button class="sort-parameter" type="button">По типу</button></li>
-                <li><button class="sort-parameter" type="button">По рейтингу</button></li>
-              </ul>
-              <ul class="sort-by-value">
-                <li><button type="button">По возрастанию</button></li>
-                <li><button type="button">По убыванию</button></li>
-              </ul>
-            </div>
-          </p>
+          <div class="sorting-parameters-wrap">
+            <span class="sorting-parameters">Сортировка:</span> 
+            <ul class="sort-by-parameter">              
+              <li><button class="sort-parameter current-sort-parameter" type="button">По цене</button></li>
+              <li><button class="sort-parameter" type="button">По типу</button></li>
+              <li><button class="sort-parameter" type="button">По рейтингу</button></li>
+            </ul>
+            <ul class="sort-by-value">
+              <li><button type="button">По возрастанию</button></li>
+              <li><button type="button">По убыванию</button></li>
+            </ul>
+          </div>
         </div>
         <div class="sorting-results">
           <h3 class="visually-hidden">Результат сортировки</h3>
           <ul class="results-list">
             <li class="hotel-card">
-              <a class="hotel-title-link" href="#">
-                <h4 class="hotel-title">Amara Resort & Spa</h4>
-              </a> 
+              <div class="hotel-description">
+                <a class="hotel-title-link" href="#">
+                  <h4 class="hotel-title">Amara Resort & Spa</h4>
+                </a> 
+                <p class="hotel-characteristics">
+                  <span class="hotel-type">Гостиница</span>
+                  <span class="hotel-price">от 4000р.</span>
+                </p>
+                <ul class="hotel-card-nav">
+                  <li class="card-nav-item">
+                    <a class="button detailes-button" href="#">Подробнее</a>
+                  </li>
+                  <li class="card-nav-item">
+                    <a class="button booking-button" href="#">Забронировать</a>
+                  </li>
+                </ul>
+              </div>
               <a class="hotel-img-link" href="#"> 
                 <img class="hotel-img" src="img/amara1.jpg" width="135" height="90" alt="Здание с лужайкой на фоне гор">
               </a>
-              <p class="hotel-characteristics">
-                <span class="hotel-type">Гостиница</span>
-                <span class="hotel-price">от 4000р.</span>
-              </p>
-              <div class="hotel-stars"></div>
-              <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.5</span></p>
-              <ul class="hotel-card-nav">
-                <li class="card-nav-item">
-                  <a class="button detailes-button" href="#">Подробнее</a>
-                </li>
-                <li class="card-nav-item">
-                  <a class="button booking-button" href="#">Забронировать</a>
-                </li>
-              </ul>
+              <div class="hotel-marks">
+                <div class="hotel-stars"></div>
+                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.5</span></p>
+              </div>
             </li>
             <li class="hotel-card">
-              <a class="hotel-title-link" href="#">
-                <h4 class="hotel-title">Desert Quail Inn</h4>
-              </a>
+              <div class="hotel-description">
+                <a class="hotel-title-link" href="#">
+                  <h4 class="hotel-title">Desert Quail Inn</h4>
+                </a>
+                <p class="hotel-characteristics">
+                  <span class="hotel-type">Мотель</span>
+                  <span class="hotel-price">от 3000р.</span>
+                </p>
+                <ul class="hotel-card-nav">
+                  <li class="card-nav-item">
+                    <a class="button detailes-button" href="#">Подробнее</a>
+                  </li>
+                  <li class="card-nav-item">
+                    <a class="button booking-button" href="#">Забронировать</a>
+                  </li>
+                </ul>
+              </div>
               <a class="hotel-img-link" href="#">
                 <img class="hotel-img" src="img/desert1.jpg" width="135" height="90" alt="Небольшое здание с паковкой среди пустыни">
               </a>
-              <p class="hotel-characteristics">
-                <span class="hotel-type">Мотель</span>
-                <span class="hotel-price">от 3000р.</span>
-              </p>
-              <div class="hotel-stars"></div>
-              <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.9</span></p>
-              <ul class="hotel-card-nav">
-                <li class="card-nav-item">
-                  <a class="button detailes-button" href="#">Подробнее</a>
-                </li>
-                <li class="card-nav-item">
-                  <a class="button booking-button" href="#">Забронировать</a>
-                </li>
-              </ul>
+              <div class="hotel-marks">
+                <div class="hotel-stars"></div>
+                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.9</span></p>
+              </div>
             </li>
             <li class="hotel-card">
-              <a class="hotel-title-link" href="#">
-                <h4 class="hotel-title">Villas at Poco Diablo</h4>
-              </a>
+              <div class="hotel-description">
+                <a class="hotel-title-link" href="#">
+                  <h4 class="hotel-title">Villas at Poco Diablo</h4>
+                </a>
+                <p class="hotel-characteristics">
+                  <span class="hotel-type">Апартаменты</span>
+                  <span class="hotel-price">от 2000р.</span>
+                </p>
+                <ul class="hotel-card-nav">
+                  <li class="card-nav-item">
+                    <a class="button detailes-button" href="#">Подробнее</a>
+                  </li>
+                  <li class="card-nav-item">
+                    <a class="button booking-button" href="#">Забронировать</a>
+                  </li>
+                </ul>
+              </div>
               <a class="hotel-img-link" href="#">  
                 <img class="hotel-img" src="img/villas1.jpg" width="135" height="90" alt="Дом окружённый зелёным газоной и деревьями">
               </a>
-              <p class="hotel-characteristics">
-                <span class="hotel-type">Апартаменты</span>
-                <span class="hotel-price">от 2000р.</span>
-              </p>
-              <div class="hotel-stars"></div>
-              <p class="hotel-rating">Рейтинг:<span class="rating-value"> 9.2</span></p>
-              <ul class="hotel-card-nav">
-                <li class="card-nav-item">
-                  <a class="button detailes-button" href="#">Подробнее</a>
-                </li>
-                <li class="card-nav-item">
-                  <a class="button booking-button" href="#">Забронировать</a>
-                </li>
-              </ul>
+              <div class="hotel-marks">
+                <div class="hotel-stars"></div>
+                <p class="hotel-rating">Рейтинг:<span class="rating-value"> 9.2</span></p>
+              </div>
             </li>
           </ul>
         </div>
