@@ -415,6 +415,7 @@ img {
 .hotels-sorting{
     display: grid;
     grid-template-columns: 160px 1fr;
+    padding: 0 70px;
 }
 
 .results-quantity {
@@ -469,6 +470,10 @@ img {
     border: none;
 }
 
+.sorting-results {
+    padding: 0 70px;
+}
+
 .sort-by-value {
     display: flex;
     list-style: none;
@@ -482,26 +487,40 @@ img {
 
 /* Hotel card */
 
-/* Тут сделай 3 колонки грида!!! А содержание на ФЛЕКСах!!! */
-
 .hotel-card {
+    outline: 1px solid tomato;
+    outline-offset: -1px;
     display: grid;
     grid-template-columns: min-content 1fr max-content;
     list-style: none;
     border-top: 1px solid var(--basic-border-grey);
 }
 
-.hotel-title-link {
-    
+.hotel-description {
+    outline: 1px solid green;
+    outline-offset: -1px;
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
 }
 
 .hotel-img-link {
-   
-    width: 230px;
+    outline: 1px solid green;
+    outline-offset: -1px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: center;
+    width: 135px;
 }
 
 .hotel-card:last-child {
     border-bottom: 1px solid var(--basic-border-grey);
+}
+
+.hotel-title-link {
+    outline: 1px solid fuchsia;
+    outline-offset: -1px;
 }
 
 .hotel-title {
@@ -512,23 +531,33 @@ img {
 }
 
 .hotel-characteristics {
-    
+    outline: 1px solid fuchsia;
+    outline-offset: -1px;
     color: var(--basic-grey);
 }
 
-.hotel-stars {
-    
+.hotel-marks {
+    outline: 1px solid green;
+    outline-offset: -1px;
+    grid-column: 3/4;
+    grid-row: 1/2;
 }
 
 .hotel-rating {
-    
     color: var(--basic-grey);
     background-color: var(--basic-bg-grey);
 }
 
 .hotel-card-nav {
-    
+    outline: 1px solid fuchsia;
+    outline-offset: -1px;
+    display: flex;
+    padding: 0;
     list-style: none;
+}
+
+.card-nav-item{
+    margin-right: 5px;
 }
 
 .detailes-button {
