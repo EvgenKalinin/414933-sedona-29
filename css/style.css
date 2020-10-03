@@ -394,7 +394,7 @@ img {
 
 .social-list{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 160px;
     margin: 0 auto;
     padding: 0;
@@ -406,6 +406,11 @@ img {
 }
 
 .social-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 48px;
     background-color: var(--basic-blue);
     color: var(--basic-white);
 }
@@ -417,6 +422,10 @@ img {
 .social-link:active {
     background-color: var(--special-blue-active);
     color: var(--special-white);
+}
+
+.social-link:active svg {
+    opacity: 0.3;
 }
 
 .copyright-wrap {
@@ -433,12 +442,12 @@ img {
     color: var(--basic-black);
 }
 
-.copyright-link:hover {
-    color: var(--basic-blue);
+.copyright-link:hover path {
+    fill: var(--basic-blue);
 }
 
-.copyright-link:active {
-    color: var(--special-light-grey);
+.copyright-link:active path {
+    fill: var(--special-light-grey);
 }
 
 /* Hotels page */
