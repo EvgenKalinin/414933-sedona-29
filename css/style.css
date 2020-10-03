@@ -162,9 +162,18 @@ img {
 
 .greeting-title{
     min-height: 510px;
-    background-image: url("../img/background-photo.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-image: 
+        url("../img/welcome.svg"),
+        url("../img/mask.svg"),
+        url("../img/background-photo.jpg");
+    background-repeat:
+        no-repeat, 
+        no-repeat,
+        no-repeat;
+    background-position:
+        center center,
+        bottom center,
+        bottom center;
 }
 
 .greeting-intro {
@@ -259,9 +268,48 @@ img {
 }
 
 .feature-title {
+    position: relative;
+    margin: 0;
+    padding-top: 100px;
     font-weight: bold;
     font-size: 21px;
     line-height: 21px;
+}
+
+.first-feature-title::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    width: 75px;
+    height: 72px;
+    background-image: url("../img/icon-house.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.second-feature-title::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    width: 75px;
+    height: 70px;
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.third-feature-title::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    width: 64px;
+    height: 77px;
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 }
 
 .features-list-item p {
