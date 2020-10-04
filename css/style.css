@@ -443,7 +443,7 @@ img {
 }
 
 .copyright-link:hover path {
-    fill: var(--basic-blue);
+    fill: var(--basic-blue);S
 }
 
 .copyright-link:active path {
