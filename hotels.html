@@ -41,9 +41,23 @@
               <li><button class="sort-parameter" type="button">По типу</button></li>
               <li><button class="sort-parameter" type="button">По рейтингу</button></li>
             </ul>
-            <ul class="sort-by-value">
-              <li><button type="button">По возрастанию</button></li>
-              <li><button type="button">По убыванию</button></li>
+            <ul class="sort-by-rule">
+              <li>
+                <button class="sort-rule increase-sort" type="button">
+                  <span class="visually-hidden">По возрастанию</span>
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA"/>
+                  </svg>
+                </button>
+              </li>
+              <li>
+                <button class="sort-rule decrease-sort sort-rule-selected" type="button">
+                  <span class="visually-hidden">По убыванию</span>
+                  <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 10L11 0L0 0L5.5 10Z" fill="#CACACA"/>
+                  </svg>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -72,7 +86,13 @@
                 <img class="hotel-img" src="img/amara1.jpg" width="135" height="90" alt="Здание с лужайкой на фоне гор">
               </a>
               <div class="hotel-marks">
-                <div class="hotel-stars"></div>
+                <div class="hotel-stars">
+                  <div class="hotel-star hotel-star-disabled"></div>
+                  <div class="hotel-star"></div>
+                  <div class="hotel-star"></div>
+                  <div class="hotel-star"></div>
+                  <div class="hotel-star"></div>
+                </div>
                 <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.5</span></p>
               </div>
             </li>
@@ -98,7 +118,13 @@
                 <img class="hotel-img" src="img/desert1.jpg" width="135" height="90" alt="Небольшое здание с паковкой среди пустыни">
               </a>
               <div class="hotel-marks">
-                <div class="hotel-stars"></div>
+                <div class="hotel-stars">
+                  <div class="hotel-star hotel-star-disabled"></div>
+                  <div class="hotel-star hotel-star-disabled"></div>
+                  <div class="hotel-star"></div>
+                  <div class="hotel-star"></div>
+                  <div class="hotel-star"></div>
+                </div>
                 <p class="hotel-rating">Рейтинг:<span class="rating-value"> 8.9</span></p>
               </div>
             </li>
@@ -125,11 +151,11 @@
               </a>
               <div class="hotel-marks">
                 <div class="hotel-stars">
-                  <div class="star"></div>
-                  <div class="star"></div>
-                  <div class="star"></div>
-                  <div class="star"></div>
-                  <div class="star"></div>
+                  <div class="hotel-star hotel-star-disabled"></div>
+                  <div class="hotel-star hotel-star-disabled"></div>
+                  <div class="hotel-star hotel-star-disabled"></div>
+                  <div class="hotel-star"></div>
+                  <div class="hotel-star"></div>
                 </div>
                 <p class="hotel-rating">Рейтинг:<span class="rating-value"> 9.2</span></p>
               </div>
