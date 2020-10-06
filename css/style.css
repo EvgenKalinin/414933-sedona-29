@@ -571,10 +571,12 @@ img {
     display: grid;
     grid-template-columns: 160px 1fr;
     padding: 0 70px;
+    margin-bottom: 10px;
 }
 
 .results-quantity {
     grid-column: 1/2;
+    margin-top: 30px;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -582,6 +584,7 @@ img {
 
 .sorting-parameters-wrap {
     grid-column: 2/3;
+    padding: 5px;
     display: grid;
     grid-template-columns: min-content 1fr min-content;
     align-items: center;
@@ -597,11 +600,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    margin-top: 15px;
 }
 
 .sort-parameter {
     padding: 0;
-    margin-right: 35px;
+    margin-right: 33px;
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
@@ -626,11 +630,14 @@ img {
 }
 
 .sorting-results {
-    padding: 0 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 125px;
 }
 
 .sort-by-rule {
     display: flex;
+    margin-top: 30px;
     list-style: none;
 }
 
@@ -663,6 +670,8 @@ img {
 /* Hotel card */
 
 .hotel-card {
+    outline: 1px solid tomato;
+    outline-offset: -1px;
     display: grid;
     grid-template-columns: min-content 1fr max-content;
     min-height: 150px;
@@ -671,14 +680,18 @@ img {
 }
 
 .hotel-description {
+    outline: 1px solid tomato;
+    outline-offset: -1px;
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .hotel-img-link {
+    outline: 1px solid tomato;
+    outline-offset: -1px;
     grid-column: 1/2;
     grid-row: 1/2;
     align-self: center;
@@ -695,6 +708,7 @@ img {
 
 .hotel-title {
     margin: 0;
+    margin-top: 23px;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -702,17 +716,23 @@ img {
 }
 
 .hotel-characteristics {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    margin-top: 7px;
     color: var(--basic-grey);
 }
 
 .hotel-marks {
+    outline: 1px solid tomato;
+    outline-offset: -1px;
     grid-column: 3/4;
     grid-row: 1/2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 }
 
 .hotel-stars {
@@ -722,7 +742,7 @@ img {
 }
 
 .hotel-star {
-    margin-left: 4px;
+    margin: 0 3px;
     width: 18px;
     height: 17px;
     background-image: url("../img/star.svg");
@@ -733,10 +753,8 @@ img {
 }
 
 .hotel-rating {
-    padding-left: 15px;
-    padding-top: 3px;
-    padding-right: 12px;
-    padding-bottom: 3px;
+    padding-left: 12px;
+    padding-right: 15px;
     margin: 0;
     color: var(--basic-grey);
     background-color: var(--basic-bg-grey);
