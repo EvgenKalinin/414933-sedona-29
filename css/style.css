@@ -781,3 +781,40 @@ img {
     color: var(--special-white);
     background-color: var(--special-brown-active);
 }
+
+/* Popup */
+
+.popup {
+    outline: 2px dotted red;
+    outline-offset: -2px;
+    padding: 55px;
+    width: 568px;
+    background-color: var(--basic-white);
+}
+
+.hotel-search-form {
+    outline: 1px solid yellow;
+    outline-offset: -1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.guest-quantity-input {
+    width: 38px;
+}
+
+.popup-submit-button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: var(--basic-blue);
+}
+
+input{
+    outline: 1px solid tomato;
+    outline-offset: -1px;    
+}
+
+label{
+    outline: 1px solid fuchsia;
+    outline-offset: -1px;
+}
