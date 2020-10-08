@@ -21,6 +21,7 @@
     --special-bg-white: rgba(255, 255, 255, 0.9);
     --special-white: rgba(255, 255, 255, 0.3);
     --special-black: rgba(0, 0, 0, 0.3);
+    --special-shadow: rgba(0, 1, 1, 0.15);
 }
 
 /* Global */
@@ -670,8 +671,6 @@ img {
 /* Hotel card */
 
 .hotel-card {
-    outline: 1px solid tomato;
-    outline-offset: -1px;
     display: grid;
     grid-template-columns: min-content 1fr max-content;
     min-height: 150px;
@@ -680,8 +679,6 @@ img {
 }
 
 .hotel-description {
-    outline: 1px solid tomato;
-    outline-offset: -1px;
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
@@ -690,8 +687,6 @@ img {
 }
 
 .hotel-img-link {
-    outline: 1px solid tomato;
-    outline-offset: -1px;
     grid-column: 1/2;
     grid-row: 1/2;
     align-self: center;
@@ -724,8 +719,6 @@ img {
 }
 
 .hotel-marks {
-    outline: 1px solid tomato;
-    outline-offset: -1px;
     grid-column: 3/4;
     grid-row: 1/2;
     display: flex;
@@ -802,39 +795,78 @@ img {
 
 /* Popup */
 
-.popup {
-    outline: 2px solid red;
-    outline-offset: -2px;
-    box-sizing: border-box;
-    padding: 55px;
+.popup-positioner {
+    position: relative;
+    margin: 0 auto;
     width: 568px;
+
+}
+
+.popup {
+    position: absolute;
+    display: none;
+    width: 568px;
+    box-sizing: border-box;
     background-color: var(--basic-white);
+    box-shadow: 0px 7px 15px var(--special-shadow);
+}
+
+.popup-show{
+    display: block;
+}
+
+.date-input, 
+.guest-quantity-input{
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .hotel-search-form {
-    outline: 1px solid green;
-    outline-offset: -1px;
     display: flex;
     flex-direction: column;
+    margin-top: 53px;
+    margin-bottom: 57px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 458px;
+    text-align: left;
 }
 
 .date-input-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
 }
 
 .date-input-title {
     align-self: center;
     min-width: 100px;
     line-height: 26px;
+    font-weight: bold;
 }
 
 .arival-input-layout {
     display: flex;
     align-items: center;
     background-color: var(--basic-bg-grey);
+}
+
+.departure-input-layout {
+    display: flex;
+    align-items: center;
+    background-color: var(--basic-bg-grey);
+}
+
+.date-input:hover {
+    background-color: var(--special-medium-grey);
+}
+
+.date-input:focus {
+    background-color: var(--basic-white);
 }
 
 .date-input {
@@ -844,12 +876,30 @@ img {
     width: 300px;
     height: 40px;
     border: none;
-    background-color: var(--basic-bg-grey);
+    background-color: inherit;
 }
 
-.arival-input-layout svg {
+.arival-input-layout svg,
+.departure-input-layout svg {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.calendar-selector {
+    padding-left: 2px;
+    padding-top: 5px;
+    width: 42px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.calendar-selector:hover path {
+    fill: var(--basic-black)
+}
+
+.calendar-selector:active path {
+    fill: var(--basic-blue)
 }
 
 .guests-quantity-wrapper {
@@ -861,12 +911,61 @@ img {
 .adult-select-wrapper,
 .kids-select-wrapper {
     display: flex;
+    width: 228px;
+}
+
+.adult-select-wrapper {
+    justify-content: space-between;
+}
+
+.kids-select-wrapper {
+    justify-content: flex-end;
+}
+
+.guest-quantity-label {
+    align-self: center;
+    line-height: 26px;
+    font-weight: bold;
 }
 
 .guests-input-layout {
-    padding-left: 38px;
-    padding-right: 38px;
+    display: flex;
+}
+
+.kid-guest-input {
+    margin-left: 26px;
+}
+
+.guest-counter-button {
+    width: 38px;
+    height: 38px;
+    border: none;
     background-color: var(--basic-bg-grey);
+    cursor: pointer;
+}
+
+.decrease-button {
+    padding-bottom: 5px;
+}
+
+.increase-button:hover path {
+    fill: var(--basic-black);
+   
+}
+
+.decrease-button:hover rect {
+    fill: var(--basic-black);
+    
+}
+
+.increase-button:active path {
+    fill: var(--basic-blue);
+   
+}
+
+.decrease-button:active rect {
+    fill: var(--basic-blue);
+    
 }
 
 .guest-quantity-input {
@@ -875,21 +974,24 @@ img {
     width: 38px;
     height: 38px;
     border: none;
+    text-align: center;
     background-color: var(--basic-bg-grey);
+}
+
+.guest-quantity-input:hover {
+    background-color: var(--special-medium-grey);
+}
+
+.guest-quantity-input:focus {
+    background-color: var(--basic-white);
 }
 
 .popup-submit-button {
     padding-top: 15px;
     padding-bottom: 15px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
     background-color: var(--basic-blue);
-}
-
-input{
-    outline: 1px solid tomato;
-    outline-offset: -1px;    
-}
-
-label{
-    outline: 1px solid fuchsia;
-    outline-offset: -1px;
 }
