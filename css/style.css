@@ -446,6 +446,14 @@ img {
     background-color: var(--special-brown-active);
 }
 
+.map {
+    width: 1200px;
+    height: 600px;
+    background-image: url("../img/map.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+}
+
 /* Footer */
 
 .main-footer {
