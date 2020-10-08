@@ -803,22 +803,79 @@ img {
 /* Popup */
 
 .popup {
-    outline: 2px dotted red;
+    outline: 2px solid red;
     outline-offset: -2px;
+    box-sizing: border-box;
     padding: 55px;
     width: 568px;
     background-color: var(--basic-white);
 }
 
 .hotel-search-form {
-    outline: 1px solid yellow;
+    outline: 1px solid green;
     outline-offset: -1px;
     display: flex;
     flex-direction: column;
 }
 
+.date-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.date-input-title {
+    align-self: center;
+    min-width: 100px;
+    line-height: 26px;
+}
+
+.arival-input-layout {
+    display: flex;
+    align-items: center;
+    background-color: var(--basic-bg-grey);
+}
+
+.date-input {
+    padding: 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 40px;
+    border: none;
+    background-color: var(--basic-bg-grey);
+}
+
+.arival-input-layout svg {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.guests-quantity-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.adult-select-wrapper,
+.kids-select-wrapper {
+    display: flex;
+}
+
+.guests-input-layout {
+    padding-left: 38px;
+    padding-right: 38px;
+    background-color: var(--basic-bg-grey);
+}
+
 .guest-quantity-input {
+    padding: 0;
+    box-sizing: border-box;
     width: 38px;
+    height: 38px;
+    border: none;
+    background-color: var(--basic-bg-grey);
 }
 
 .popup-submit-button {
