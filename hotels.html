@@ -24,10 +24,48 @@
     <main class="hotels-main">
       <h1 class="visually-hidden">Гостиницы города Седона</h1>
       <section class="hotels-features">
+
         <h2 class="visually-hidden">Параметры гостиниц</h2>
-        <form class="features-select">
-          <p>Тут будет форма для выбора гостиницы</p>
+        <form class="features-select" action="https://echo.htmlacademy.ru/courses" method="get">
+          <div class="left-side-form">
+            <fieldset>
+              <legend>Инфраструктура:</legend>
+              <input class="infrastructure-type visually-hidden" type="checkbox" id="swimming-pool" name="swimming-pool" checked>
+              <label for="swimming-pool">Бассейн</label>
+              <input class="infrastructure-type visually-hidden" type="checkbox" id="parking" name="parking">
+              <label for="parking">Парковка</label>
+              <input class="infrastructure-type visually-hidden" type="checkbox" id="wifi" name="wifi">
+              <label for="wifi">Wi-Fi</label>
+            </fieldset>
+            <fieldset>
+              <legend>Тип жилья:</legend>
+              <input class="housing-type visually-hidden" type="checkbox" id="hotel" name="hotel" checked>
+              <label for="hotel">Гостиница</label>
+              <input class="housing-type visually-hidden" type="checkbox" id="motel" name="motel" checked>
+              <label for="motel">Мотель</label>
+              <input class="housing-type visually-hidden" type="checkbox" id="apartments" name="apartments" checked>
+              <label for="apartmens">Апартаменты</label>
+            </fieldset> 
+          </div>
+          <div class="right-side-form">
+            <fieldset>
+              <legend>Стоимость в сутки (р):</legend>
+              <div class="min-price-field">
+                <label for="from-price">От</label>
+                <input type="text" id="from-price" name="from-price" value="0">
+              </div>
+              <div class="max-price-field">
+                <label for="to-price">До</label>
+                <input type="text" id="to-price" name="to-price" value="3000">
+              </div>
+              <div class="price-range-filter">
+  
+              </div>
+            </fieldset>
+            <input type="submit" value="Показать">
+          </div>
         </form>
+
       </section>
       <section class="hotels-result">
         <h2 class="visually-hidden">Результат выбора</h2>

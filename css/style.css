@@ -573,6 +573,42 @@ img {
     background-position: 0 0;
 }
 
+.features-select {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1060px;
+}
+
+.left-side-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 525px;
+}
+
+.left-side-form fieldset{
+    display: flex;
+    flex-basis: 230px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.left-side-form label {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.right-side-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 525px;
+}
+
 .hotels-result {
     grid-row: 2/3;
     background-color: var(--basic-white);
