@@ -53,19 +53,23 @@
               <div class="price-field-wrap">
                 <div class="min-price-field">
                   <label for="from-price">От</label>
-                  <input type="text" id="from-price" name="from-price" value="0">
+                  <input type="number" id="from-price" name="from-price" value="0" min="0">
                 </div>
                 <div class="super-duper-mini-border-stick"></div>
                 <div class="max-price-field">
                   <label for="to-price">До</label>
-                  <input type="text" id="to-price" name="to-price" value="3000">
+                  <input type="number" id="to-price" name="to-price" value="3000" min="0">
                 </div>
               </div>
               <div class="price-range-filter">
-  
+                <div class="range-filter-scale">
+                  <div class="scale-bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
               </div>
             </fieldset>
-            <input type="submit" value="Показать">
+            <input class="features-select-submit" type="submit" value="Показать">
           </div>
         </form>
 

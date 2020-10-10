@@ -14,6 +14,7 @@
     --special-grey: #A9A9A9;
     --special-medium-grey: #EBEBEB;
     --special-light-grey: #BDBBBC;
+    --special-toggle-grey: #ABABAB;
     --special-blue-hover: #669EC0;
     --special-blue-active: #5496BD;
     --special-brown-hover: #604E43;
@@ -577,6 +578,7 @@ img {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    padding-top: 27px;
     width: 1060px;
 }
 
@@ -590,11 +592,13 @@ img {
     display: flex;
     flex-basis: 230px;
     margin: 0;
+    margin-right: 26px;
     padding: 0;
     border: none;
 }
 
 .left-side-form legend  {
+    margin-bottom: 25px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;
@@ -605,6 +609,7 @@ img {
 .left-side-form label {
     position: relative;
     display: block;
+    margin-bottom: 25px;
     padding-left: 40px;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
@@ -617,7 +622,6 @@ img {
 .infrastructure-type + label::before {
     content: "";
     position: absolute;
-
     left: 0;
     width: 27px;
     height: 23px;
@@ -629,13 +633,36 @@ img {
 .infrastructure-type:checked + label::before {
     content: "";
     position: absolute;
-
     left: 0;
     width: 27px;
     height: 23px;
     background-image: url("../img/checkbox-on.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
+}
+
+.infrastructure-type:disabled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-off-disabled.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: default;
+}
+
+.infrastructure-type:checked:disabled + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-on-disabled.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: default;
 }
 
 .housing-type + label::before {
@@ -662,25 +689,28 @@ img {
     background-repeat: no-repeat;
 }
 
+.infrastructure-type:disabled + label {
+    cursor: default;
+}
+
 .right-side-form {
-    outline: 1px solid orangered;
-    outline-offset: -1px;
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: 335px;
 }
 
 .right-side-form fieldset {
-    outline: 1px solid tomato;
-    outline-offset: -1px;
     display: flex;
     flex-direction: column;
+    align-self: center;
     margin: 0;
     padding: 0;
+    padding-left: 10px;
     border: none;
 }
 
 .right-side-form legend {
+    margin-bottom: 10px;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
     line-height: 21px;
@@ -689,6 +719,8 @@ img {
 }
 
 .price-field-wrap {
+    margin-bottom: 5px;
+    min-height: 33px;
     display: flex;
     border: 2px solid var(--basic-white);
     border-radius: 2px;
@@ -696,12 +728,20 @@ img {
 
 .min-price-field {
     display: flex;
-    justify-content: center;
-    width: 154px;
+    justify-content: flex-end;
+    width: 155px;
+}
+
+.min-price-field label {
+    align-self: center;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
 }
 
 .min-price-field input{
-    width: 60px;
+    width: 68px;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -711,6 +751,7 @@ img {
 }
 
 .super-duper-mini-border-stick {
+    align-self: center;
     width: 2px;
     height: 22px;
     background-color: var(--basic-white);
@@ -718,12 +759,20 @@ img {
 
 .max-price-field {
     display: flex;
-    justify-content: center;
-    width: 154px;
+    justify-content: flex-end;
+    width: 155px;
+}
+
+.max-price-field label {
+    align-self: center;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
 }
 
 .max-price-field input {
-    width: 60px;
+    width: 78px;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
     line-height: 21px;
@@ -732,9 +781,74 @@ img {
     border: none;
 }
 
+.price-range-filter {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.range-filter-scale {
+    width: 316px;
+    background-color: var(--special-white);
+}
+
+.scale-bar {
+    width: 255px;
+    height: 2px;
+    background-color: var(--basic-white);
+}
+
+.toggle {
+    padding: 0;
+    width: 4px;
+    height: 4px;
+    border: 7px solid var(--basic-white);
+    border-radius: 50%;
+    background-color: var(--special-toggle-grey);
+    box-shadow: 0 2px 1px 0 var(--special-toggle-grey);
+    cursor: pointer;
+}
+
+.toggle:hover {
+    transform: scale(1.2);
+}
+
+.toggle-min {
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+
+.toggle-max {
+    position: absolute;
+    top: 6px;
+    left: 254px;
+}
+
+.features-select-submit {
+    align-self: center;
+    padding: 5px 33px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.features-select-submit:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
 .hotels-result {
     grid-row: 2/3;
     background-color: var(--basic-white);
+    opacity: 1;
 }
 
 .hotels-sorting{
@@ -982,6 +1096,7 @@ img {
 
 .popup-show{
     display: block;
+    animation: bounce 1s;
 }
 
 .date-input, 
@@ -1163,4 +1278,20 @@ img {
     line-height: 26px;
     font-weight: bold;
     background-color: var(--basic-blue);
+}
+
+/* Animation */
+
+@keyframes bounce{
+    0%{transform: translateY(-1000px);
+    }  
+    /* 70%{
+        transform: translateY(30px);
+    } */
+    /* 90%{
+        transform: translateX(-10px);
+    } */
+    100%{
+        transform: translateY(0);
+    }
 }
