@@ -8,7 +8,6 @@
     --basic-bg-grey: #F2F2F2;
     --basic-block-bg-grey: #EEEEEE;
     --basic-border-grey: #E5E5E5;
-
     --special-extra-dark-grey: #666666;
     --special-dark-grey: #6A6A6A;
     --special-grey: #A9A9A9;
@@ -166,7 +165,7 @@ img {
 
 .greeting-title{
     margin-bottom: 40px;
-    min-height: 510px;
+    min-height: 509px;
     background-image: 
         url("../img/welcome.svg"),
         url("../img/mask.svg"),
@@ -179,6 +178,7 @@ img {
         center center,
         bottom center,
         bottom center;
+    background-color: var(--basic-blue);
 }
 
 .greeting-intro {
@@ -434,6 +434,8 @@ img {
 }
 
 .hotel-search-button {
+    display: block;
+    margin: 0 auto;
     padding: 30px;
     width: 568px;
     font-size: 21px;
@@ -456,6 +458,7 @@ img {
     background-image: url("../img/map.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-color: var(--basic-blue);
 }
 
 /* Footer */
@@ -491,6 +494,7 @@ img {
 
 .contacts-phone {
     display: block;
+    color: var(--basic-black);
 }
 
 .social {
@@ -596,6 +600,7 @@ img {
 
 .left-side-form fieldset {
     display: flex;
+    flex-direction: column;
     flex-basis: 230px;
     margin: 0;
     margin-right: 26px;
@@ -623,6 +628,10 @@ img {
     color: var(--basic-white);
     cursor: pointer;
     user-select: none;
+}
+
+.left-side-form input:focus {
+    outline: 2px solid var(--basic-black);
 }
 
 .infrastructure-type + label::before {
@@ -674,7 +683,6 @@ img {
 .housing-type + label::before {
     content: "";
     position: absolute;
-
     left: 0;
     width: 27px;
     height: 23px;
@@ -686,7 +694,6 @@ img {
 .housing-type:checked + label::before {
     content: "";
     position: absolute;
-
     left: 0;
     width: 27px;
     height: 23px;
@@ -747,6 +754,7 @@ img {
 }
 
 .min-price-field input{
+    -moz-appearance: textfield;
     width: 68px;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
@@ -754,6 +762,11 @@ img {
     color: var(--basic-white);
     background-color: transparent;
     border: none;
+}
+
+.min-price-field input::-webkit-inner-spin-button,
+.min-price-field input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 .super-duper-mini-border-stick {
@@ -778,6 +791,7 @@ img {
 }
 
 .max-price-field input {
+    -moz-appearance: textfield;
     width: 78px;
     font-family: "PT Sans", sans-serif;
     font-size: 14px;
@@ -785,6 +799,11 @@ img {
     color: var(--basic-white);
     background-color: transparent;
     border: none;
+}
+
+.max-price-field input::-webkit-inner-spin-button,
+.max-price-field input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
 }
 
 .price-range-filter {
@@ -1002,7 +1021,7 @@ img {
 .hotel-characteristics {
     display: flex;
     justify-content: space-between;
-    width: 180px;
+    width: 185px;
     margin-top: 7px;
     color: var(--basic-grey);
 }
@@ -1059,7 +1078,7 @@ img {
 
 .detailes-button {
     display: block;
-    padding: 3px 17px;
+    padding: 3px 20px;
     background-color: var(--basic-blue);
 }
 
@@ -1093,7 +1112,6 @@ img {
     position: relative;
     margin: 0 auto;
     width: 568px;
-
 }
 
 .popup {
@@ -1245,22 +1263,18 @@ img {
 
 .increase-button:hover path {
     fill: var(--basic-black);
-   
 }
 
 .decrease-button:hover rect {
-    fill: var(--basic-black);
-    
+    fill: var(--basic-black);   
 }
 
 .increase-button:active path {
-    fill: var(--basic-blue);
-   
+    fill: var(--basic-blue);   
 }
 
 .decrease-button:active rect {
-    fill: var(--basic-blue);
-    
+    fill: var(--basic-blue);   
 }
 
 .guest-quantity-input {
@@ -1298,11 +1312,9 @@ img {
         transform: translateY(-1000px);
         opacity: 0;
     }
-    
     60%{
         opacity: 0.01;
     }
-   
     100%{
         transform: translateY(0);
         opacity: 1;
