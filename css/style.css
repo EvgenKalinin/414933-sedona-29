@@ -176,7 +176,7 @@ img {
         no-repeat;
     background-position:
         center center,
-        bottom center,
+        bottom 0px center,
         bottom center;
     background-color: var(--basic-blue);
 }
@@ -437,7 +437,7 @@ img {
     display: block;
     margin: 0 auto;
     padding: 30px;
-    width: 568px;
+    width: 510px;
     font-size: 21px;
     line-height: 26px;
     background-color: var(--basic-brown);
