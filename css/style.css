@@ -50,7 +50,7 @@ img {
 /* Grid */
 
 .page {
-    min-width: 1280px;
+    min-width: 1200px;
     height: 100%;
 }
 
@@ -511,9 +511,9 @@ img {
 
 .social-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 155px;
+    width: 310px;
     margin: 0 auto;
     padding: 0;
     list-style: none;
@@ -1023,6 +1023,14 @@ img {
     color: var(--basic-black);
 }
 
+.hotel-title:hover {
+    color: var(--basic-blue);
+}
+
+.hotel-title:active {
+    color: var(--special-black);
+}
+
 .hotel-characteristics {
     display: flex;
     justify-content: space-between;
@@ -1063,16 +1071,16 @@ img {
 }
 
 .hotel-rating {
-    min-width: 110px;
     min-height: 25px;
     margin: 0;
-    text-align: center;
+    padding: 0px 15px;
     color: var(--basic-grey);
     background-color: var(--basic-bg-grey);
 }
 
 .hotel-card-nav {
     display: flex;
+    margin-bottom: 30px;
     padding: 0;
     list-style: none;
 }
